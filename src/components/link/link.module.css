@@ -1,0 +1,13 @@
+.link {
+    color: var(--neutral-light-600);
+    text-decoration: underline;
+    transition: color var(--transition-200);
+}
+
+.link:hover {
+    color: var(--neutral-light-800)
+}
+
+.link:focus-visible {
+    color: var(--neutral-light-800);
+}

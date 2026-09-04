@@ -1,0 +1,16 @@
+.link {
+    padding: 2px;
+    border-radius: 8px;
+    outline: 2px solid transparent;
+    transition: outline-color var(--transition-200);
+    height: 40px;
+}
+
+.link:focus-visible {
+    outline-color: var(--neutral-light-0);
+}
+
+.logo {
+    width: 126px;
+    height: 40px;
+}

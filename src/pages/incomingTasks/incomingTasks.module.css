@@ -1,0 +1,8 @@
+.tasks {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    height: 100%;
+    background-color: var(--neutral-light-0);
+    transition: background-color var(--transition-200);
+}
+

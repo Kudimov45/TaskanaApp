@@ -1,0 +1,41 @@
+.btn {
+    border-radius: 8px;
+    background-color: var(--primary-400);
+    color: var(--primary-0);
+    display: flex;
+    align-items: center;
+    padding: 6px 15px 6px 10px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    gap: 8px;
+    box-shadow: 2px 2px 4px 0px #00000033;
+    transition: background-color var(--transition-200), border-color var(--transition-200), outline-color var(--transition-200);
+    cursor: pointer;
+    border: 2px solid transparent;
+    outline: 2px solid transparent;
+}
+
+.btn:hover {
+    background-color: var(--primary-500);
+}
+
+.btn:focus-visible {
+    background-color: var(--primary-500);
+    border-color: var(--neutral-light-900);
+    outline-color: var(--neutral-light-0);
+}
+
+.btn:active {
+    background-color: var(--primary-300);
+}
+
+.btn:disabled {
+    background-color: #D5101080;
+}
+
+.image {
+    padding: 3px;
+    width: 24px;
+    height: 24px;
+}

@@ -1,0 +1,68 @@
+.wrapper {
+    position: relative;
+    border-radius: 8px;
+    background-color: var(--neutral-dark-200);
+    padding: 4px;
+    outline: 2px solid transparent;
+}
+
+.wrapper:has(.switch:focus-visible) {
+    outline-color: var(--neutral-dark-900);
+}
+
+.switch {
+    opacity: 0; /* скрываем стандартный чекбокс */
+    position: absolute;
+    cursor: pointer;
+    top:0;
+    left: 0;
+    width: 76px;
+    height: 40px;
+}
+
+.switch:checked + .wrapperIcon .iconDark {
+    background-color: var(--primary-400);
+    color: var(--neutral-dark-900)
+}
+
+.switch:checked + .wrapperIcon .iconLight {
+    background-color: transparent;
+    color: var(--neutral-light-600);
+}
+
+.switch:checked:hover + .wrapperIcon .iconDark {
+    background-color: var(--neutral-dark-900);
+    color: var(--neutral-dark-0)
+}
+
+.switch:hover + .wrapperIcon .iconLight {
+    background-color: var(--neutral-light-0);
+    color: var(--neutral-light-900);
+}
+
+.switch:checked:hover + .wrapperIcon .iconLight {
+    background-color: transparent;
+    color: var(--neutral-light-600);
+}
+
+.wrapperIcon {
+    display: flex;
+    gap: 4px;
+}
+
+.iconLight, .iconDark {
+    padding: 4px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    color: var(--neutral-dark-400);
+    border-radius: 4px;
+    transition: background-color var(--transition-200), color var(--transition-200);
+}
+
+
+
+.iconLight {
+    background-color: var(--primary-400);
+    color: var(--neutral-light-0)
+}
