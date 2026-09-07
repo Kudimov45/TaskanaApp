@@ -5,7 +5,6 @@ import Illustration from "../illustration/Illustration";
 const statistic = []
 
 function Statistic() {
-    const { theme } = useTheme()
 
     return (
         <>

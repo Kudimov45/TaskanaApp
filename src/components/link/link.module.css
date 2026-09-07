@@ -1,13 +1,31 @@
 .link {
-    color: var(--neutral-light-600);
-    text-decoration: underline;
-    transition: color var(--transition-200);
+  position: relative;
+  color: var(--neutral-600);
+  text-decoration: underline;
+  transition: color var(--transition-200);
+  outline: 2px solid transparent;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -4px;
+  outline: 2px solid transparent;
+  transition: outline-color var(--transition-200);
+  border-radius: 6px;
+  width: 52px;
+  height: 28px;
 }
 
 .link:hover {
-    color: var(--neutral-light-800)
+  color: var(--neutral-800);
 }
 
 .link:focus-visible {
-    color: var(--neutral-light-800);
+  color: var(--neutral-800);
+}
+
+.link:focus-visible::after {
+  outline-color: var(--neutral-900);
 }

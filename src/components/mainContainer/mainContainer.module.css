@@ -1,21 +1,23 @@
 .container {
-    max-width: 996px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    padding: 0 24px 0 24px;
-    overflow-y: auto;
+  max-width: 996px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px 0 24px;
 }
 
 .title {
-    position: sticky;
-    top: 0;
-    font-size: 32px;
-    line-height: 40px;
-    font-weight: 700;
-    padding: 24px 0;
-    margin: 0;
-    color: var(--neutral-light-900);
-    transition: color var(--transition-200);
+  position: sticky;
+  top: 0;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+  padding: 24px 0;
+  margin: 0;
+  color: var(--neutral-900);
+  transition:
+    color var(--transition-200),
+    background-color var(--transition-200);
+  background-color: var(--neutral-0);
 }

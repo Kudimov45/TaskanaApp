@@ -2,17 +2,16 @@ import style from "./navBar.module.css"
 import { useTheme } from '../themeSwitcher/ThemeSwitcher';
 import Icon from "../icon/Icon";
 
-const NavBar = () => {
-    const { theme } = useTheme()
-
-
-
-    const message = [
+const message = [
         {
             "id": 1,
             "text": "Входящие",
         },
     ];
+
+const NavBar = () => {
+
+    
     return (
         <nav className={style.navBar}>
             <ul className={style.list}>

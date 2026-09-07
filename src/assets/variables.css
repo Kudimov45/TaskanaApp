@@ -1,53 +1,47 @@
 :root {
-    --neutral-light-0: #ffffff; /* Основной фон */
-    --neutral-light-100: #fbfbfb; /* Фон боковых лайаутов */
-    --neutral-light-200: #f3f3f3; /* Фон вторичных кнопок, ховер списков */
-    --neutral-light-300: #ececec; /* Ховер вторичных кнопок */
-    --neutral-light-400: #bfbfbf; /* Бордеры */
-    --neutral-light-500: #8c8c8c; /* Иконки */
-    --neutral-light-600: #6c6c6c; /* Второстепенный текст, ховер бордера */
-    --neutral-light-700: #393939;
-    --neutral-light-800: #1c1c1c; /* Основной текст */
-    --neutral-light-900: #141414; /* Инверсия текста, бордер фокуса */
+  --neutral-0: #ffffff; /* Основной фон */
+  --neutral-100: #fbfbfb; /* Фон боковых лайаутов */
+  --neutral-200: #f3f3f3; /* Фон вторичных кнопок, ховер списков */
+  --neutral-300: #ececec; /* Ховер вторичных кнопок */
+  --neutral-400: #bfbfbf; /* Бордеры */
+  --neutral-500: #8c8c8c; /* Иконки */
+  --neutral-600: #6c6c6c; /* Второстепенный текст, ховер бордера */
+  --neutral-700: #393939;
+  --neutral-800: #1c1c1c; /* Основной текст */
+  --neutral-900: #141414; /* Инверсия текста, бордер фокуса */
 
-    --neutral-dark-0: #141414; /* Основной фон */
-    --neutral-dark-100: #1C1C1C; /* Фон боковых лайаутов */
-    --neutral-dark-200: #262626; /* Фон вторичных кнопок, ховер списков */
-    --neutral-dark-300: #333333; /* Ховер вторичных кнопок */
-    --neutral-dark-400: #6C6C6C; /* Бордеры */
-    --neutral-dark-500: #8c8c8c; /* Иконки */
-    --neutral-dark-600: #bfbfbf; /* Второстепенный текст, ховер бордера */
-    --neutral-dark-700: #ececec;
-    --neutral-dark-800: #fbfbfb; /* Основной текст */
-    --neutral-dark-900: #ffffff; /* Инверсия текста, бордер фокуса */
+  --primary-0: #fff4f4; /* Заливка приоритета 03 */
+  --primary-100: #ffcece;
+  --primary-200: #fca9a9;
+  --primary-300: #f25959; /* Pressed контролов  */
+  --primary-400: #d51010; /* Основной цвет  */
+  --primary-500: #a60c0c; /* Ховер */
+  --primary-600: #760909;
+  --primary-400-500: linear-gradient(
+    var(--primary-400),
+    var(--primary-500)
+  ); /* Цвет лого */
 
-    --primary-0: #fff4f4; /* Заливка приоритета 03 */
-    --primary-100: #ffcece;
-    --primary-200: #fca9a9;
-    --primary-300: #f25959; /* Pressed контролов  */
-    --primary-400: #d51010; /* Основной цвет  */
-    --primary-500: #a60c0c; /* Ховер */
-    --primary-600: #760909;
-    --primary-400-500: linear-gradient(
-        var(--primary-400),
-        var(--primary-500)
-    ); /* Цвет лого */
+  --base-dark: #000000; /* Фон хедера */
+  --base-white: #ffffff; /* Цвет текста хедера*/
+  --base-800: #262626;
+  --base-600: #6c6c6c;
 
-    --base-dark: #000000; /* Фон хедера */
+  --shadow-base-dark: 2px 2px 4px 0px #00000080;
+  --shadow-base-hover-dark: 2px 8px 12px 0px #000000cc;
 
-    --transition-200: 0.7s ease-in;
-
+  --transition-200: 0.2s ease;
 }
 
 .dark {
-    --neutral-light-0: var(--neutral-dark-0); /* Основной фон */
-    --neutral-light-100: var(--neutral-dark-100); /* Фон боковых лайаутов */
-    --neutral-light-200: var(--neutral-dark-200); /* Фон вторичных кнопок, ховер списков */
-    --neutral-light-300: var(--neutral-dark-300); /* Ховер вторичных кнопок */
-    --neutral-light-400: var(--neutral-dark-400); /* Бордеры */
-    --neutral-light-500: var(--neutral-dark-500); /* Иконки */
-    --neutral-light-600: var(--neutral-dark-600); /* Второстепенный текст, ховер бордера */
-    --neutral-light-700: var(--neutral-dark-700);
-    --neutral-light-800: var(--neutral-dark-800); /* Основной текст */
-    --neutral-light-900: var(--neutral-dark-900)
+  --neutral-0: #141414; /* Основной фон */
+  --neutral-100: #1c1c1c; /* Фон боковых лайаутов */
+  --neutral-200: #262626; /* Фон вторичных кнопок, ховер списков */
+  --neutral-300: #333333; /* Ховер вторичных кнопок */
+  --neutral-400: #6c6c6c; /* Бордеры */
+  --neutral-500: #8c8c8c; /* Иконки */
+  --neutral-600: #bfbfbf; /* Второстепенный текст, ховер бордера */
+  --neutral-700: #ececec;
+  --neutral-800: #fbfbfb; /* Основной текст */
+  --neutral-900: #ffffff; /* Инверсия текста, бордер фокуса */
 }

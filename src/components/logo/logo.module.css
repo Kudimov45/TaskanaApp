@@ -1,16 +1,27 @@
 .link {
-    padding: 2px;
-    border-radius: 8px;
-    outline: 2px solid transparent;
-    transition: outline-color var(--transition-200);
-    height: 40px;
+  padding: 2px 0 0 1px;
+  outline: 2px solid transparent;
+  height: 40px;
+  position: relative;
 }
 
-.link:focus-visible {
-    outline-color: var(--neutral-light-0);
+.link::after {
+  content: "";
+  position: absolute;
+  border-radius: 8px;
+  width: 138px;
+  height: 52px;
+  top: -4px;
+  left: -4px;
+  outline: 2px solid transparent;
+  transition: outline-color var(--transition-200);
+}
+
+.link:focus-visible::after {
+  outline-color: var(--base-white);
 }
 
 .logo {
-    width: 126px;
-    height: 40px;
+  width: 126px;
+  height: 40px;
 }

@@ -1,31 +1,26 @@
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-shrink: 0;
 }
 
 .placeholderImage {
-    margin-bottom: 22px;
-    text-align: center;
+  margin-bottom: 22px;
+  text-align: center;
 }
 
 .text {
-    margin: 0;
-    width: 352px;
-    font-size: 16px;
-    line-height: 24px;
-    color: var(--neutral-light-800);
-    transition: color var(--transition-200);
+  margin: 0;
+  width: 352px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--neutral-800);
+  transition: color var(--transition-200);
 }
 
 .img {
-    color: var(--neutral-light-0);
-    transition: color var(--transition-200);
-}
-
-.dark .img {
-    color: var(--neutral-dark-0)
+  transition: fill var(--transition-200);
 }

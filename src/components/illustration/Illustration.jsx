@@ -2,27 +2,28 @@ import TaskDone from "./illustrations/taskDone/taskDone";
 import TaskInfo from "./illustrations/taskInfo/TaskInfo";
 
 const illustrations = [
-    {
-        "id": 1,
-        "name": "taskInfo",
-        "el": TaskInfo
-    },
-    {
-        "id": 2,
-        "name": "taskDone",
-        "el": TaskDone
-    },
-    
+  {
+    id: 1,
+    name: "taskInfo",
+    el: TaskInfo,
+  },
+  {
+    id: 2,
+    name: "taskDone",
+    el: TaskDone,
+  },
 ];
 
-const Illustration = ({ illustrationName, className }) => {
-    const illustration = illustrations.find((item) => item.name === illustrationName);
+const Illustration = ({ illustrationName, className, fill = "#ffffff" }) => {
+  const illustration = illustrations.find(
+    (item) => item.name === illustrationName,
+  );
 
-    if (!illustration) {
-        return null;
-    }
-    const Component = illustration.el;
-    return <Component className={className} key={illustration.id} />;
-}
+  if (!illustration) {
+    return null;
+  }
+  const Component = illustration.el;
+  return <Component className={className} key={illustration.id} fill={fill} />;
+};
 
-export default Illustration
+export default Illustration;

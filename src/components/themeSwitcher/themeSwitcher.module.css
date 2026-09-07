@@ -1,68 +1,83 @@
 .wrapper {
-    position: relative;
-    border-radius: 8px;
-    background-color: var(--neutral-dark-200);
-    padding: 4px;
-    outline: 2px solid transparent;
+  position: relative;
+  border-radius: 8px;
+  background-color: var(--base-800);
+  padding: 4px;
 }
 
-.wrapper:has(.switch:focus-visible) {
-    outline-color: var(--neutral-dark-900);
+.wrapper::after {
+  content: "";
+  position: absolute;
+  outline: 2px solid transparent;
+  top: -2px;
+  left: -2px;
+  border-radius: 8px;
+  width: 80px;
+  height: 44px;
+  z-index: -1;
+  transition: outline-color var(--transition-200);
+}
+
+.wrapper:has(.switch:focus-visible)::after {
+  outline-color: var(--base-white);
+  z-index: 1;
 }
 
 .switch {
-    opacity: 0; /* скрываем стандартный чекбокс */
-    position: absolute;
-    cursor: pointer;
-    top:0;
-    left: 0;
-    width: 76px;
-    height: 40px;
-}
-
-.switch:checked + .wrapperIcon .iconDark {
-    background-color: var(--primary-400);
-    color: var(--neutral-dark-900)
-}
-
-.switch:checked + .wrapperIcon .iconLight {
-    background-color: transparent;
-    color: var(--neutral-light-600);
-}
-
-.switch:checked:hover + .wrapperIcon .iconDark {
-    background-color: var(--neutral-dark-900);
-    color: var(--neutral-dark-0)
-}
-
-.switch:hover + .wrapperIcon .iconLight {
-    background-color: var(--neutral-light-0);
-    color: var(--neutral-light-900);
-}
-
-.switch:checked:hover + .wrapperIcon .iconLight {
-    background-color: transparent;
-    color: var(--neutral-light-600);
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 76px;
+  height: 40px;
 }
 
 .wrapperIcon {
-    display: flex;
-    gap: 4px;
+  display: flex;
+  gap: 4px;
 }
 
-.iconLight, .iconDark {
-    padding: 4px;
-    display: block;
-    width: 32px;
-    height: 32px;
-    color: var(--neutral-dark-400);
-    border-radius: 4px;
-    transition: background-color var(--transition-200), color var(--transition-200);
+.iconLight,
+.iconDark {
+  padding: 4px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  color: var(--base-600);
+  border-radius: 4px;
+  transition:
+    background-color var(--transition-200),
+    color var(--transition-200);
 }
-
-
 
 .iconLight {
-    background-color: var(--primary-400);
-    color: var(--neutral-light-0)
+  background-color: var(--primary-400);
+  color: var(--neutral-0);
+}
+
+.switch:hover + .wrapperIcon .iconLight--light {
+  background-color: var(--neutral-0);
+  color: var(--neutral-900);
+}
+
+.iconLight--dark {
+  background-color: transparent;
+  color: var(--base-600);
+}
+
+.switch + .wrapperIcon .iconDark--dark {
+  background-color: var(--primary-400);
+  color: var(--base-white);
+}
+
+.switch:hover + .wrapperIcon .iconDark--dark {
+  background-color: var(--base-white);
+  color: var(--base-dark);
+}
+
+.switch:focus-visible + .wrapperIcon .iconLight--light,
+.switch:focus-visible + .wrapperIcon .iconDark--dark {
+  background-color: var(--base-white);
+  color: var(--base-dark);
 }

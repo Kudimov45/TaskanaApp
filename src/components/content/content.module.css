@@ -1,12 +1,14 @@
 .content {
-    display: grid;
-    grid-template-columns: 204px 1fr 400px;
-    height: calc(100vh - 64px);
-    overflow: hidden;
-    min-height: 0;
+  display: grid;
+  grid-template-columns: 204px 1fr 400px;
+  height: calc(100vh - 64px);
+  overflow: hidden;
+  min-height: 0;
 }
 
 .main {
   width: 100%;
   overflow-y: hidden;
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
