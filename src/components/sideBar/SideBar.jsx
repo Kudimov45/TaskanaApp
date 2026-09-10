@@ -1,15 +1,12 @@
-import Statistic from "../statistic/Statistic"
-import style from "./sideBar.module.css"
-import { useTheme } from '../themeSwitcher/ThemeSwitcher';
+import { Statistic } from "../statistic";
+import style from "./sideBar.module.css";
 
 const SideBar = () => {
-    const { theme } = useTheme()
+  return (
+    <aside className={style.sideBar}>
+      <Statistic />
+    </aside>
+  );
+};
 
-    return (
-        <aside className={`${style.sideBar} ${theme === 'dark' ? style.sideBarDark : ''}`}>
-            <Statistic/>
-        </aside>
-    )
-}
-
-export default SideBar
+export default SideBar;

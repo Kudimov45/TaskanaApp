@@ -1,15 +1,7 @@
-import AppLayout from './layouts/applayout/AppLayout'
-import { ThemeProvider } from '@/components/themeSwitcher/ThemeSwitcher';
+import { AppLayout } from "@/layouts/appLayout";
 
 function App() {
-
-
-  return (
-    <ThemeProvider>
-      <AppLayout />
-    </ThemeProvider>
-      
-  )
+  return <AppLayout />;
 }
 
-export default App
+export default App;

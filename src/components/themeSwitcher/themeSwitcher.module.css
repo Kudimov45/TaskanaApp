@@ -3,23 +3,29 @@
   border-radius: 8px;
   background-color: var(--base-800);
   padding: 4px;
+
+  box-shadow: var(--shadow-on-header-default);
 }
 
 .wrapper::after {
   content: "";
   position: absolute;
+  border: 2px solid transparent;
   outline: 2px solid transparent;
   top: -2px;
   left: -2px;
   border-radius: 8px;
-  width: 80px;
-  height: 44px;
+  width: 76px;
+  height: 40px;
   z-index: -1;
-  transition: outline-color var(--transition-200);
+  transition:
+    outline-color var(--transition-200),
+    border-color var(--transition-200);
 }
 
 .wrapper:has(.switch:focus-visible)::after {
   outline-color: var(--base-white);
+  border-color: var(--base-900);
   z-index: 1;
 }
 
@@ -31,6 +37,7 @@
   left: 0;
   width: 76px;
   height: 40px;
+  z-index: 2;
 }
 
 .wrapperIcon {
@@ -48,12 +55,14 @@
   border-radius: 4px;
   transition:
     background-color var(--transition-200),
-    color var(--transition-200);
+    color var(--transition-200),
+    box-shadow;
 }
 
 .iconLight {
   background-color: var(--primary-400);
   color: var(--neutral-0);
+  box-shadow: var(--shadow-on-header-default);
 }
 
 .switch:hover + .wrapperIcon .iconLight--light {
@@ -64,11 +73,13 @@
 .iconLight--dark {
   background-color: transparent;
   color: var(--base-600);
+  box-shadow: none;
 }
 
 .switch + .wrapperIcon .iconDark--dark {
   background-color: var(--primary-400);
   color: var(--base-white);
+  box-shadow: var(--shadow-on-header-default);
 }
 
 .switch:hover + .wrapperIcon .iconDark--dark {

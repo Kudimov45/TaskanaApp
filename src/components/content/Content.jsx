@@ -1,9 +1,8 @@
 import style from "./content.module.css";
-import NavBar from "@/components/navBar/NavBar";
-import IncomingTasks from "@/pages/incomingTasks/IncomingTasks";
-import SideBar from "../sideBar/SideBar";
-
-import Footer from "@/components/footer/Footer";
+import { NavBar } from "../navBar";
+import { IncomingTasks } from "@/pages/incomingTasks";
+import { SideBar } from "../sideBar";
+import { Footer } from "../footer";
 
 const Content = () => {
   return (

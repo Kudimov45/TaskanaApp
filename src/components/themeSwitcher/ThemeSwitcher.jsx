@@ -1,11 +1,10 @@
 import style from "./themeSwitcher.module.css";
-import Icon from "../icon/Icon";
+import { Icon } from "../icon";
+import { Button } from "../button";
 
-import { createContext, useContext, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
-const ThemeContext = createContext(null);
-
-export const ThemeProvider = ({ children }) => {
+const ThemeSwitcher = () => {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
@@ -19,30 +18,14 @@ export const ThemeProvider = ({ children }) => {
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
-};
-
-export const useTheme = () => {
-  const context = useContext(ThemeContext);
-  if (!context) {
-    throw new Error("useTheme должен использоваться внутри ThemeProvider");
-  }
-  return context;
-};
-
-const ThemeSwitcher = () => {
-  const { theme, toggleTheme } = useTheme();
-
-  return (
     <div className={style.wrapper}>
-      <button
+      <Button
         className={style.switch}
         type="button"
         onClick={toggleTheme}
-      ></button>
+        aria-label="Переключить тему"
+        aria-pressed={theme === "dark"}
+      ></Button>
       <div className={style.wrapperIcon}>
         <Icon
           className={`${style.iconLight} ${theme === "light" ? style["iconLight--light"] : style["iconLight--dark"]}`}

@@ -30,7 +30,7 @@
   font-weight: 600;
   display: flex;
   align-items: center;
-  box-shadow: 2px 2px 4px 0px #00000033;
+  box-shadow: var(--shadow-base-default);
   transition:
     background-color var(--transition-200),
     box-shadow var(--transition-200),
@@ -42,21 +42,18 @@
 }
 
 .icon {
-  padding: 3px;
-  width: 24px;
-  height: 24px;
   color: var(--neutral-0);
   transition: color var(--transition-200);
 }
 
 .link:hover {
   background-color: var(--neutral-700);
-  box-shadow: 2px 8px 12px 0px #00000040;
+  box-shadow: var(--shadow-base-hover);
 }
 
 .link:focus-visible {
   background-color: var(--neutral-700);
-  box-shadow: 2px 8px 12px 0px #00000040;
+  box-shadow: var(--shadow-base-hover);
   border-color: var(--neutral-0);
   outline-color: var(--neutral-800);
 }

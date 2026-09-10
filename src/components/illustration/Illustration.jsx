@@ -1,4 +1,4 @@
-import TaskDone from "./illustrations/taskDone/taskDone";
+import TaskDone from "./illustrations/taskDone/TaskDone";
 import TaskInfo from "./illustrations/taskInfo/TaskInfo";
 
 const illustrations = [

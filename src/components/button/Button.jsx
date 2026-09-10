@@ -1,13 +1,15 @@
-import style from "./button.module.css"
-import Icon from "../icon/Icon"
+import style from "./button.module.css";
 
-const Button = ({ children}) => {
-    return (
-        <button className={style.btn} type="button">
-            <Icon className={style.image} iconName={"iconPlus"}/>
-            {children}
-        </button>
-    )
-}
+const Button = ({ children, onClick, className }) => {
+  return (
+    <button
+      className={className ? className : style.btn}
+      type="button"
+      onClick={onClick}
+    >
+      {children}
+    </button>
+  );
+};
 
-export default Button
+export default Button;
