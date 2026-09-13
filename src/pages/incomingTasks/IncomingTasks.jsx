@@ -1,10 +1,10 @@
 import style from "./incomingTasks.module.css";
 import MainContainer from "@/components/mainContainer/MainContainer";
 
-const IncomingTasks = () => {
+const IncomingTasks = ({ tasks }) => {
   return (
     <div className={style.tasks}>
-      <MainContainer />
+      <MainContainer tasks={tasks} />
     </div>
   );
 };

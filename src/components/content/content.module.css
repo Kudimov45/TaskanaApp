@@ -4,6 +4,7 @@
   height: calc(100vh - 64px);
   overflow: hidden;
   min-height: 0;
+  position: relative;
 }
 
 .main {

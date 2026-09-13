@@ -22,23 +22,36 @@
     var(--primary-500)
   ); /* Цвет лого */
 
+  --secondary-0: #f5f0ff; /* Заливка приоритета 02 */
+  --secondary-100: #eadfff;
+  --secondary-200: #d9c5ff;
+  --secondary-300: #b792ff; /* Цвет бордеров */
+  --secondary-400: #742cff; /* Основной цвет  */
+  --secondary-500: #581bcc; /* Ховер бордеров */
+
   --base-dark: #000000; /* Фон хедера */
   --base-white: #ffffff; /* Цвет текста хедера*/
   --base-800: #262626;
   --base-600: #6c6c6c;
   --base-900: #141414;
 
+  --btn-disabled: ;
+
   --shadow-base-default: 2px 2px 4px 0px rgba(0, 0, 0, 0.2);
   --shadow-base-hover: 2px 8px 12px 0px rgba(0, 0, 0, 0.25);
   --shadow-on-header-default: 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
   --shadow-on-header-hover: 2px 8px 12px 0px rgba(0, 0, 0, 0.8);
+  --shadow-sm-default: 2px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  --shadow-sm-hover: 2px 8px 12px 0px rgba(0, 0, 0, 0.2);
 
   --transition-200: 0.2s ease;
+  --transition-400: 0.4s ease;
 }
 
 .dark {
   --neutral-0: #141414; /* Основной фон */
   --neutral-100: #1c1c1c; /* Фон боковых лайаутов */
+  --neutral-200: #262626;
   --neutral-300: #333333; /* Ховер вторичных кнопок */
   --neutral-600: #bfbfbf; /* Второстепенный текст, ховер бордера */
   --neutral-700: #ececec;
@@ -47,4 +60,6 @@
 
   --shadow-base-default: 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
   --shadow-base-hover: 2px 8px 12px 0px rgba(0, 0, 0, 0.8);
+  --shadow-sm-default: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+  --shadow-sm-hover: 2px 8px 12px 0px rgba(0, 0, 0, 0.6);
 }

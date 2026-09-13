@@ -3,31 +3,19 @@ import { Logo } from "../logo";
 import { Button } from "../button";
 import { ThemeSwitcher } from "../themeSwitcher";
 import { Icon } from "../icon";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 
-const Header = () => {
+const Header = ({ setIsActive }) => {
   const [isLoading, setIsLoading] = useState(false);
-  const secondsRef = useRef(0);
 
   const handleClick = () => {
-    secondsRef.current = 0;
     setIsLoading(true);
+    setIsActive(true);
+
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2500);
   };
-
-  useEffect(() => {
-    if (!isLoading) return;
-
-    const timerId = setInterval(() => {
-      secondsRef.current += 1;
-
-      if (secondsRef.current >= 3) {
-        clearInterval(timerId);
-        setIsLoading(false);
-      }
-    }, 1000);
-
-    return () => clearInterval(timerId);
-  }, [isLoading]);
 
   return (
     <header className="header">

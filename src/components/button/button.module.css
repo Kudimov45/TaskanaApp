@@ -14,7 +14,8 @@
   transition:
     background-color var(--transition-200),
     border-color var(--transition-200),
-    outline-color var(--transition-200);
+    outline-color var(--transition-200),
+    box-shadow var(--transition-200);
   cursor: pointer;
   border: 2px solid transparent;
   outline: 2px solid transparent;
@@ -22,18 +23,22 @@
 
 .btn:hover {
   background-color: var(--primary-500);
+  box-shadow: var(--shadow-on-header-hover);
 }
 
 .btn:focus-visible {
   background-color: var(--primary-500);
   border-color: var(--neutral-900);
   outline-color: var(--neutral-0);
+  box-shadow: var(--shadow-on-header-hover);
 }
 
 .btn:active {
   background-color: var(--primary-300);
+  box-shadow: none;
 }
 
 .btn:disabled {
   background-color: #d5101080;
+  box-shadow: var(--shadow-on-header-default);
 }

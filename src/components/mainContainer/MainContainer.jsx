@@ -1,12 +1,12 @@
 import styles from "./mainContainer.module.css";
 import { TaskList } from "../taskList";
 
-function MainContainer() {
+function MainContainer({ tasks }) {
   return (
     <div className={styles.container}>
       <h1 className="visually-hidden">Сайт для планирования задач</h1>
       <h2 className={styles.title}>Входящие</h2>
-      <TaskList />
+      <TaskList tasks={tasks} />
     </div>
   );
 }
